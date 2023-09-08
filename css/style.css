@@ -251,4 +251,55 @@ main {
 }
 
 
+@media (max-width: 768px) {
+    body {
+        position: relative;
+    }
+
+    main {
+        min-height: calc(100vh - 100px);
+        margin: 0;
+        padding: 0;
+    }
+
+    .main-container-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .product-card {
+        max-width: 100%;
+    }
+
+    .carousel-container {
+        grid-column: span 1;
+        max-width: 100%;
+    }
+
+    .banner {
+        height: 100px;
+    }
+
+    .footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 10px; 
+    }
+    .footer-content {
+        text-align: center; 
+        margin: 0;
+        padding: 0;
+    }
+
+    .footer h5 {
+        margin-bottom: 5px; 
+    }
+
+    .footer input[type="button"] {
+        padding: 5px 10px; 
+    }
+}
+
+
 
