@@ -259,12 +259,12 @@ nav a:hover {
   }
   .grid-layout h2 {
     color: yellow;
-    font-size: 10px;
+    font-size: 16px;
     padding-top: 0.2rem;
   }
   .grid-layout p {
     color: yellow;
-    font-size: 10px;
+    font-size: 16px;
   }
   .grid-layout img {
     max-width: 100%; /* Ajusta la imagen al ancho del contenedor */
@@ -319,10 +319,10 @@ nav a:hover {
   .form-container .card form label {
     display: block;
     margin-bottom: 5px;
-    font-size: 10px;
+    font-size: 16px;
   }
   .form-container .card form a {
-    font-size: 10px;
+    font-size: 16px;
     color: yellow;
   }
   .form-container .card form input[type=nombre],
@@ -354,13 +354,13 @@ nav a:hover {
     flex-direction: column-reverse;
     align-items: center;
     text-align: center;
-    font-size: 10px;
+    font-size: 16px;
     max-width: 100%;
     padding-left: 90px;
   }
   .footer h5 {
     color: yellow;
-    font-size: 10px;
+    font-size: 16px;
   }
   .footer div.footer-icons {
     display: grid;
@@ -376,14 +376,14 @@ nav a:hover {
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 10px;
     padding: 5px;
-    font-size: 10px;
+    font-size: 16px;
   }
   .notice-container h3 {
     color: yellow;
-    font-size: 16px;
+    font-size: 18px;
   }
   .notice-container h6 {
-    font-size: 16px;
+    font-size: 18px;
   }
   .notice-container .side-1 {
     display: flex;
@@ -410,7 +410,7 @@ nav a:hover {
   .product-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    font-size: 10px;
+    font-size: 16px;
   }
   .product-container .card {
     background-color: rgb(32, 1, 145);
@@ -419,7 +419,7 @@ nav a:hover {
     font-size: smaller;
   }
   .product-container .card h6 {
-    font-size: 16px;
+    font-size: 18px;
   }
   .product-container .card p {
     margin: 0;
