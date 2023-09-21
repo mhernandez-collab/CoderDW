@@ -49,7 +49,7 @@ nav{
         padding-top: auto; /* Ajusta el espaciado superior según sea necesario */
         height: 100%; /* Asegura que el div ocupe toda la altura del contenedor */
         h4{
-            font-family: variables.$font-banner;
+            font-family: variables.$font-banner-mv;
             margin: 0;
             text-align: center;
         }
@@ -255,9 +255,9 @@ nav{
 @media (max-width: 768px) {
     
     .navegacion h1.banner {
-        font-family: variables.$font-banner;
+        font-family: variables.$font-banner-mv;
+        font-size: variables.$font-size-base;
         margin: 0;
-        font-size: 1.5rem; 
         background-size: cover; // Ajustar la imagen de fondo de manera proporcional
         background-repeat: no-repeat;
         background-position:inherit;
@@ -370,12 +370,10 @@ nav{
         flex-direction: column-reverse; // Coloca los elementos en una columna
         align-items: center; // Centra horizontalmente los elementos
         text-align: center; // Alinea el texto al centro  
-        font-size: variables.$font-size-small;  
         max-width: 100%;
         padding-left: 90px;
-        h5{
+        h4{
             font-family: variables.$font-banner-mv;
-            font-size: variables.$font-size-base;
         }
         div.footer-icons{
             display: grid;
