@@ -3,65 +3,73 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Freakshop</title>
-    <link rel="stylesheet" href="../css/style.css"/>
+    <link rel="stylesheet" href="../sass/styles.css"/> 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 </head>
 <body>
-    <div class="banner">
-        <h1>Freakshop</h1>
-    </div>      
-    <nav class="navbar navbar-expand-lg navbar-custom bg-custom">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link" href="../index.html">Home</a>
-                    <a class="nav-link active" href="form.html">Iniciar Sesion</a>
-                    <a class="nav-link" href="productos.html">Productos</a>
-                    <a class="nav-link" href="ofertas.html">Ofertas</a>
-                    <a class="nav-link" href="noticias.html">Noticias</a>
-                </div>
+    <div class="navegacion">
+        <h1 class="banner">Freakshop</h1> 
+        <nav>
+            <div>
+                <a href="../index.html">Home</a>
+                <a href="form.html">Iniciar Sesion</a>
+                <a href="productos.html">Productos</a>
+                <a href="ofertas.html">Ofertas</a>
+                <a href="noticias.html">Noticias</a>
             </div>
+        </nav>
+    </div>  
+    <main class='form-container'>
+        <div class='card'>
+            <form>
+                <h3>Iniciar Sesion</h3>
+                <label for="email">Correo Electronico:</label>
+                <input type="email" name="email" required />
+                <label for="password">Contraseña:</label>
+                <input type="password" name="password" required />
+                <input type="submit" value="Iniciar Sesion" />
+                <a href="noticias.html">Olvidaste tu contraseña?</a>
+            </form>
         </div>
-    </nav>
-    <main class="main-container">
-        <div class='grid-item cuatro'>
-            <div class="card">
-                <form>
-                    <h2>Iniciar Sesion</h2>
-                    <label for="email">Correo Electronico:</label>
-                    <input type="email" name="email" required />
-                    <label for="password">Contraseña:</label>
-                    <input type="password" name="password" required />
-                    <input type="submit" value="Iniciar Sesion" />
-                    <input type="reset" value="Limpiar formulario" />
-                </form>
-            </div>
+        <div class='card'> 
+            <form>
+                <h3>Registrate</h3>
+                <label for="email">Correo Electronico:</label>
+                <input type="email" name="email" required />
+                <label for="password">Contraseña:</label>
+                <input type="password" name="password" required />
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" required />
+                <label for="address">Direccion:</label>
+                <input type="text" name="address" required />
+                <input type="submit" value="Registrate" />
+                <input type="reset" value="Limpiar formulario" />
+            </form>
         </div>
-        <div class='grid-item cinco'>
-            <div class="card">
-                <form>
-                    <h2>Registrate</h2>
-                    <label for="email">Correo Electronico:</label>
-                    <input type="email" name="email" required />
-                    <label for="password">Contraseña:</label>
-                    <input type="password" name="password" required />
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" name="nombre" required />
-                    <label for="address">Direccion:</label>
-                    <input type="address" name="address" required />
-                    <input type="submit" value="Registrate" />
-                    <input type="reset" value="Limpiar formulario" />
-                </form>
-            </div>
-        </div>        
     </main>
     <footer class="footer">
-        <div class="footer-content">
-            <h5>Necesitas ayuda?</h5>
-            <input type="button" value="Contactanos"/>
+        <div class="footer-list">
+            <h6>Necesitas ayuda?</h6>
+            <p>Escribenos: freashop@support.com</p>
+            <ul>
+                <li>Soporte</li>
+                <li>Lenguaje</li>
+                <li>Terminos y condiciones</li>
+            </ul>
+        </div>
+        <div class="copyright">
+            <h4 class="banner">Freakshop</h4><span></span>
+            <p>2023 Freakshop. Todos los derechos reservados.</p>
+        </div>
+        <div class="footer-icons">
+            <a href="http://www.facebook.com"><img class="icon" src="../img/facebook.png" alt="facebook" /></a>
+            <a href="http://www.instagram.com"><img class="icon" src="../img/instagram.png" alt="instagram" /></a>
+            <a href="http://www.whatsapp.com"><img class="icon" src="../img/whatsapp.png" alt="whatsapp" /></a>
+            <a href="http://www.twitter.com"><img class="icon" src="../img/gorjeo.png" alt="twitter" /></a>
+            <a href="http://www.americanexpress.com"><img class="icon" src="../img/american-express.png" alt="americanexpress" /></a>
+            <a href="http://www.mastercard.com"><img class="icon" src="../img/tarjeta.png" alt="mastercard" /></a>
+            <a href="http://www.visa.com"><img class="icon" src="../img/financiero.png" alt="visa" /></a>
+            <a href="http://www.paypal.com"><img class="icon" src="../img/paypal (1).png" alt="paypal" /></a>
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>

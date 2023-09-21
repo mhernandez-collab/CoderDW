@@ -1,0 +1,20 @@
+@use 'variables';
+@use 'anidacion';
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: variables.$font-body;
+    color: variables.$color-txt;
+}
+main{
+    background-color: variables.$color;
+}
+nav{
+    background-color: variables.$color;
+}
+footer{
+    background-color: variables.$color-footer;
+}
+

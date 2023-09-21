@@ -1,0 +1,478 @@
+@use 'variables';
+
+nav{
+    height: 2rem;
+    padding: 5px;
+    a{
+        text-decoration: none;
+        color: variables.$color-a;
+        &:hover{
+            cursor: pointer;
+            color: variables.$color-txt;
+        }
+    }
+};
+.grid-layout{
+    display: grid;
+    padding: 5px;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.navegacion{
+    h1.banner{
+        font-family: variables.$font-banner;
+        line-height: 150px;
+        margin: 0;
+        height: 10rem;
+        background-image:variables.$imagen-banner;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding-left: 1rem;
+    }
+}
+.footer {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-evenly;
+    font-size: smaller;
+    padding: 3px;
+    padding-right: 90px;
+    background-color: variables.$color-footer;
+    .copyright {
+        font-family: variables.$font-banner;
+        display: flex;
+        flex-direction: column;
+        justify-content:space-evenly;
+        margin: 0; /* Elimina cualquier margen predeterminado */
+        padding-top: auto; /* Ajusta el espaciado superior según sea necesario */
+        height: 100%; /* Asegura que el div ocupe toda la altura del contenedor */
+        h4{
+            font-family: variables.$font-banner;
+            margin: 0;
+            text-align: center;
+        }
+        p{
+            text-align: center;
+        }
+    }
+    div.footer-list {
+        margin: 0 10px; // Añade márgenes interiores según sea necesario
+        ul {
+            list-style: none; // Quita los puntos de la lista
+            padding: 0; // Quita el espaciado interior de la lista
+            margin-top: 10px; // Añade margen superior según sea necesario
+            li {
+                list-style: none;
+                text-align: start;
+            }
+        }
+    }
+    div.footer-icons{
+        display: grid;
+        grid-template-columns:auto auto auto auto;
+        grid-template-rows: auto auto;
+        align-content: center;
+        a {
+            img.icon {
+                width: 30px;
+                margin: 6px;
+            }
+        }
+    }
+}
+
+.form-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    padding: 5px;
+    .card {
+        background-color: variables.$color-footer; // Fondo blanco
+        border: 1px solid variables.$color-txt; // Borde con color gris claro
+        border-radius: 10px; // Bordes redondeados
+        padding: 20px; // Espaciado interno
+        margin: 0 auto; // Centrar la tarjeta en el contenedor
+        form {
+            text-align: center; // Centrar el contenido del formulario
+            label {
+                display: block; // Mostrar etiquetas en líneas separadas
+                margin-bottom: 5px; // Espaciado inferior para las etiquetas
+            }
+            a{
+                font-size: smaller;
+                color: variables.$color-txt
+            }
+            input[type="nombre"],
+            input[type="text"],
+            input[type="email"],
+            input[type="password"],
+            input[type="submit"],
+            input[type="reset"] {
+                width: 100%; // Ancho completo para los campos y botones
+                padding: 10px; // Espaciado interno para los campos y botones
+                margin-bottom: 10px; // Espaciado inferior para los campos y botones
+                border: 1px solid variables.$color-txt; // Borde con color gris claro
+                border-radius: 5px; // Bordes redondeados para los campos y botones
+                color: black;
+            }
+    
+            input[type="submit"],
+            input[type="reset"] {
+                background-color: variables.$color-txt;; // Color de fondo para botones de enviar y restablecer
+                color: variables.$color; // Color del texto para botones de enviar y restablecer
+                cursor: pointer; // Cambio de cursor al pasar el ratón
+                &:hover {
+                    background-color: variables.$color;
+                    color: variables.$color-txt ; // Cambio de color de fondo al pasar el ratón
+                }
+            }
+        }
+    }
+    
+}
+.product-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-bottom: 5px;
+    .card {
+        background-color: variables.$color-card;
+        border: 1px solid variables.$color-txt;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 3px;
+        font-size: smaller;
+        justify-content: space-between;
+        img {
+            max-width: 100%; /* Ajusta el ancho de la imagen al 100% del ancho de la tarjeta */
+            max-height: 300px; /* Establece la altura máxima para las imágenes */
+            object-fit: cover; 
+            display: block; /* Asegura que la imagen sea un elemento de bloque para centrarla verticalmente */
+            margin: 0 auto;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid variables.$color-txt;
+            border-radius: 5px;
+            background-color: variables.$color-txt;
+            color: variables.$color;
+            position:sticky;
+            margin-top: auto;
+            cursor: pointer;
+            &:hover {
+                background-color: variables.$color;
+                color: variables.$color-txt;
+            }
+        }
+    }
+}
+.offers-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    padding: 20px;
+
+    .grid-offers {
+        max-width: 1000px; /* Ajusta el ancho máximo según tu preferencia */
+        width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+    }
+
+    .carousel {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .carousel-inner {
+        text-align: center; /* Centra el contenido del carrusel horizontalmente */
+    }
+
+    .carousel-item img {
+        max-width: 100%; /* Ajusta el ancho máximo de las imágenes al 100% */
+        height: auto; /* Mantiene la relación de aspecto de las imágenes */
+    }
+
+    .carousel-caption {
+        h5 {
+            font-size: 1.5rem; /* Tamaño de fuente para el título */
+        }
+
+        p {
+            font-size: 1rem; /* Tamaño de fuente para el texto */
+        }
+
+        .comprar-btn {
+            font-weight: bold;
+            padding: 10px 20px;
+            font-size: 1rem; /* Tamaño de fuente para el botón */
+            background-color: variables.$color-txt;
+            border: 1px solid variables.$color-txt;
+            color: variables.$color;
+            cursor: pointer;
+
+            &:hover {
+                background-color: variables.$color;
+                color: variables.$color-txt;
+            }
+        }
+    }
+}
+
+
+.notice-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    padding: 5px;
+    .side-1{
+        display: flex;
+        flex-direction: column; /* Alinear contenido verticalmente */
+        align-items: center; /* Alinear contenido horizontalmente */
+        img{
+            max-width: 100%; /* Ajustar la imagen al 100% del ancho de su contenedor */
+            height: auto; /* Mantener la proporción de aspecto de la imagen */
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio (9 / 16 * 100) */
+            overflow: hidden;
+            width: 100%;
+            iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+
+
+
+@media (max-width: 768px) {
+    
+    .navegacion h1.banner {
+        font-family: variables.$font-banner;
+        margin: 0;
+        font-size: 1.5rem; 
+        background-size: cover; // Ajustar la imagen de fondo de manera proporcional
+        background-repeat: no-repeat;
+        background-position:inherit;
+        padding-left: 0.5rem;
+    }
+    .grid-layout {
+        display: grid;
+        padding: 5px;
+        grid-template-columns: 1fr;
+        grid-gap: 0.5rem;
+        .g2{
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        h2{
+            color: variables.$color-txt;
+            font-size: variables.$font-size-small;
+            padding-top: 0.2rem;
+        }
+        p{
+            color: variables.$color-txt;
+            font-size: variables.$font-size-small;
+        }
+        img {
+            max-width: 100%; /* Ajusta la imagen al ancho del contenedor */
+            height: auto; /* Mantiene la relación de aspecto de la imagen */
+        }
+    }
+    .grid-offers{
+        display: none;
+    }
+    .grid-offers-2{
+        display: grid;
+        grid-template-rows: auto;
+        .card {
+            background-color: variables.$color-card;
+            border: 1px solid variables.$color-txt;
+            border-radius: 10px;
+            color: variables.$color-txt;
+            padding: 20px;
+            margin: 3px;
+            font-size: smaller;            
+            img {
+                max-width: 100%; /* Ajusta la imagen al 100% del ancho de la tarjeta */
+                height: 100%; /* Mantiene la relación de aspecto de la imagen */
+            }
+            button {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid variables.$color-txt;
+                border-radius: 5px;
+                background-color: variables.$color-txt;
+                color: variables.$color;
+                position:sticky;
+                margin-top: auto;
+            }
+        }
+    }
+    .form-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+        padding: 5px;
+        .card {
+            background-color: variables.$color-footer;
+            border: 1px solid variables.$color-txt;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 0 auto;
+            form {
+                text-align: center;
+                label {
+                    display: block;
+                    margin-bottom: 5px;
+                    font-size: variables.$font-size-small;  
+                }
+                a {
+                    font-size: variables.$font-size-small;  
+                    color: variables.$color-txt;
+                }
+                input[type="nombre"],
+                input[type="text"],
+                input[type="email"],
+                input[type="password"],
+                input[type="submit"],
+                input[type="reset"] {
+                    width: 100%;
+                    padding: 10px;
+                    margin-bottom: 10px;
+                    border: 1px solid variables.$color-txt;
+                    border-radius: 5px;
+                    color: black;
+                }
+                input[type="submit"],
+                input[type="reset"] {
+                    background-color: variables.$color-txt;
+                    color: variables.$color;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: variables.$color;
+                        color: variables.$color-txt;
+                    }
+                }
+            }
+        }
+    }
+    
+    .footer{
+        display: flex; // Cambia la disposición a flexbox
+        flex-direction: column-reverse; // Coloca los elementos en una columna
+        align-items: center; // Centra horizontalmente los elementos
+        text-align: center; // Alinea el texto al centro  
+        font-size: variables.$font-size-small;  
+        max-width: 100%;
+        padding-left: 90px;
+        h5{
+            color: variables.$color-txt;
+            font-size: variables.$font-size-small;
+        }
+        div.footer-icons{
+            display: grid;
+            grid-template-columns:auto auto auto auto;
+            grid-template-rows: auto auto;
+            a {
+                img.icon {
+                    width: 18px;
+                    margin: 4px;
+                }
+            }
+        }
+    }
+    .notice-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 10px;
+        padding: 5px;
+        font-size: variables.$font-size-small;
+        h3{
+            color: variables.$color-txt;
+            font-size: variables.$font-size-base;
+        }
+        h6{
+            font-size: variables.$font-size-base;
+        }
+        .side-1{
+            display: flex;
+            flex-direction: column; /* Alinear contenido verticalmente */
+            align-items: center; /* Alinear contenido horizontalmente */
+            img{
+                max-width: 100%; /* Ajustar la imagen al 100% del ancho de su contenedor */
+                height: auto; /* Mantener la proporción de aspecto de la imagen */
+            }
+            .video-container {
+                position: relative;
+                padding-bottom: 56.25%; /* 16:9 Aspect Ratio (9 / 16 * 100) */
+                overflow: hidden;
+                width: 100%;
+                iframe {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+    .product-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-size: variables.$font-size-small;
+    .card {
+        background-color: variables.$color-card;
+        border: 1px solid variables.$color-txt;
+        border-radius: 10px;
+        font-size: smaller;
+        h6{
+            font-size: variables.$font-size-base;
+        }
+        p{
+            margin: 0;
+        }
+        img {
+            max-width: 50%;
+            max-height: auto;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto;
+        }
+
+        button {
+            width: 100%;
+            padding: 5px;
+            font-weight: bolder;
+            border: 1px solid variables.$color-txt;
+            border-radius: 5px;
+            background-color: variables.$color-txt;
+            color: variables.$color;
+            position: sticky;
+            margin-top: auto;
+            cursor: pointer;
+
+            &:hover {
+                background-color: variables.$color;
+                color: variables.$color-txt;
+            }
+        }
+    }
+}
+}
+
+
+
+@media (min-width: 768px) {
+    .grid-offers-2 {
+        display: none; // Oculta .grid-offers-2 en pantallas grandes
+    }
+}

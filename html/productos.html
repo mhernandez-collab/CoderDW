@@ -5,74 +5,97 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Freakshop - Productos</title>
-    <link rel="stylesheet" href="../css/style.css"/>
+    <link rel="stylesheet" href="../sass/styles.css"/> 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 </head>
 <body>
-    <div class="banner">
-        <h1>Freakshop</h1>
-    </div>    
-    <nav class="navbar navbar-expand-lg navbar-custom bg-custom">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link" href="../index.html">Home</a>
-                    <a class="nav-link" href="form.html">Iniciar Sesion</a>
-                    <a class="nav-link active" href="productos.html">Productos</a>
-                    <a class="nav-link" href="ofertas.html">Ofertas</a>
-                    <a class="nav-link" href="noticias.html">Noticias</a>
+    <div class="navegacion">
+        <h1 class="banner">Freakshop</h1> 
+        <nav>
+            <div>
+                <a href="../index.html">Home</a>
+                <a href="form.html">Iniciar Sesion</a>
+                <a href="productos.html">Productos</a>
+                <a href="ofertas.html">Ofertas</a>
+                <a href="noticias.html">Noticias</a>
+            </div>
+        </nav>
+    </div>  
+    <main class="product-container">
+        <div class='card'>
+            <div>
+                <img src="../img/series_x_3_1.png" alt="Xbox Series X">
+            </div>
+                <div>
+                    <h6>Xbox Series X</h6>
+                    <p>Caracteristícas</p>
+                    <p>CPU: CPU Zen 2 personaliza de 8 núcleos a 3,8 GHz (3,66 GHz con SMT)</p>
+                    <p>Tarjeta gráfica: GPU de 12 TERAFLOPS, 52 CU a 1,825 GHz con RDNA 2 personalizada</p>
+                    <p>Memoria: GDDR6 de 16 GB</p>
+                    <p>Precio: $19.99</p>
+                </div>
+                <div>
+                    <button>Comprar</button>
                 </div>
             </div>
-        </div>
-    </nav>
-    <main class="main-container-2">
-        <div class="product-card">
-            <img src="../img/microsoft-xbox-series-x-1tb-dotomexico-vista-frontal.webp" alt="Producto 1">
-            <h2>Xbox Series X</h2>
-            <p>Caracteristícas</p>
-            <ul class="product-specs">
-                <li>CPU: CPU Zen 2 personaliza de 8 núcleos a 3,8 GHz (3,66 GHz con SMT)</li>
-                <li>Tarjeta gráfica: GPU de 12 TERAFLOPS, 52 CU a 1,825 GHz con RDNA 2 personalizada</li>
-                <li>Memoria: GDDR6 de 16 GB</li>
-            </ul>
-            <p>Precio: $19.99</p>
-            <button>Comprar</button>
-        </div>
-        <div class="product-card">
-            <img src="../img/41p8FiLGtrL._AC_UF1000,1000_QL80_.jpg" alt="Producto 2">
-            <h2>Playstation 5</h2>
-            <p>Caracteristícas</p>
-            <ul class="product-specs">
-                <li>CPU: x86-64-AMD Ryzen Zen de 8 Núcles / 16 Hilos a 3.5GHz</li>
-                <li>GPU: AMD RDNA 2 con 10,28 TFLOPs, 36 CUs a 2,23 GHz (frecuencia variable) con Ray Tracing</li>
-                <li>RAM: 16 GB GDDR6/256-bit 448 GB/s</li>
-                <li>Unidad óptica: 4K UHD Blu-ray</li>
-            </ul>
-            <p>Precio: $24.99</p>
-            <button>Comprar</button>
-        </div>
-        <div class="product-card">
-            <img src="../img/71PeqDCFgCL.jpeg" alt="Producto 3">
-            <h2>Astro A50</h2>
-            <p>Caracteristícas</p>
-            <ul class="product-specs">
-                <li>Compatible con: Pc/MAC, Playstation 4, Xbox</li>
-                <li>Conectividad: Por cable o Wireless 5 GHz.</li>
-                <li>Batería:15 horas.</li>
-                <li>Peso: 380 gramos</li>
-            </ul>
-            <p>Precio: $24.99</p>
-            <button>Comprar</button>
-        </div>
+            <div class='card'>
+                <div>
+                    <img src="../img/ps56-standard-edition.png" alt="Playstation 5">
+                </div>
+                <div>            
+                    <h6>Playstation 5</h6>
+                    <p>Caracteristícas</p>
+                    <p>CPU: x86-64-AMD Ryzen Zen de 8 Núcles / 16 Hilos a 3.5GHz</p>
+                    <p>GPU: AMD RDNA 2 con 10,28 TFLOPs, 36 CUs a 2,23 GHz (frecuencia variable) con Ray Tracing</p>
+                    <p>RAM: 16 GB GDDR6/256-bit 448 GB/s</p>
+                    <p>Precio: $24.99</p>
+                </div>
+                <div>
+                    <button>Comprar</button>
+                </div>
+            </div>
+            <div class='card'>
+                <div>
+                    <img src="../img/71PeqDCFgCL(1).png" alt="Astro A40">
+                </div>
+                <div>
+                    <h6>Astro A50</h6>
+                    <p>Caracteristícas</p>
+                    <p>Compatible con: Pc/MAC, Playstation 4, Xbox</p>
+                    <p>Conectividad: Por cable o Wireless 5 GHz.</p>
+                    <p>Batería:15 horas.</p>
+                    <p>Peso: 380 gramos</p>
+                    <p>Precio: $24.99</p>
+                </div>
+                <div>
+                    <button>Comprar</button>
+                </div>
+            </div>
     </main>
     <footer class="footer">
-        <div class="footer-content">
-            <h5>Necesitas ayuda?</h5>
-            <input type="button" value="Contactanos"/>
+        <div class="footer-list">
+            <h6>Necesitas ayuda?</h6>
+            <p>Escribenos: freashop@support.com</p>
+            <ul>
+                <li>Soporte</li>
+                <li>Lenguaje</li>
+                <li>Terminos y condiciones</li>
+            </ul>
         </div>
+        <div class="copyright">
+            <h4 class="banner">Freakshop</h4> 
+            <p>2023 Freakshop. Todos los derechos reservados.</p>
+        </div>
+        <div class="footer-icons">
+            <a href="http://www.facebook.com"><img class="icon" src="../img/facebook.png" alt="facebook" /></a>
+            <a href="http://www.instagram.com"><img class="icon" src="../img/instagram.png" alt="instagram" /></a>
+            <a href="http://www.whatsapp.com"><img class="icon" src="../img/whatsapp.png" alt="whatsapp" /></a>
+            <a href="http://www.twitter.com"><img class="icon" src="../img/gorjeo.png" alt="twitter" /></a>
+            <a href="http://www.americanexpress.com"><img class="icon" src="../img/american-express.png" alt="americanexpress" /></a>
+            <a href="http://www.mastercard.com"><img class="icon" src="../img/tarjeta.png" alt="mastercard" /></a>
+            <a href="http://www.visa.com"><img class="icon" src="../img/financiero.png" alt="visa" /></a>
+            <a href="http://www.paypal.com"><img class="icon" src="../img/paypal (1).png" alt="paypal" /></a>
+        </div>  
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>

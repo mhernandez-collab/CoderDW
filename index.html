@@ -5,47 +5,82 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Freakshop</title>
-    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="sass/styles.css"/> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 </head>
 <body>
-    <div class="banner">
-        <h1>Freakshop</h1>
-    </div>    
-    <nav class="navbar navbar-expand-md navbar-custom bg-custom">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link active" href="index.html">Home</a>
-                    <a class="nav-link" href="html/form.html">Iniciar Sesion</a>
-                    <a class="nav-link" href="html/productos.html">Productos</a>
-                    <a class="nav-link" href="html/ofertas.html">Ofertas</a>
-                    <a class="nav-link" href="html/noticias.html">Noticias</a>
-                </div>
+    <div class="navegacion">
+        <h1 class="banner">Freakshop</h1> 
+        <nav>
+            <div>
+                <a href="index.html">Home</a>
+                <a href="html/form.html">Iniciar Sesion</a>
+                <a href="html/productos.html">Productos</a>
+                <a href="html/ofertas.html">Ofertas</a>
+                <a href="html/noticias.html">Noticias</a>
+            </div>
+        </nav>
+    </div>     
+    <main class="grid-layout">
+        <div>
+            <div>
+                <img src="img/setup.jpeg" alt="Imagen derecha" class="img-fluid">
+            </div>
+            <div>  
+                <h2>Bienvenido a Freashop!</h2>
+                <p>En Freakshop, no solo entendemos tu pasión por los videojuegos, ¡la compartimos! Somos apasionados jugadores 
+                    y entendemos lo importante que es tener acceso a los últimos lanzamientos, los mejores accesorios y 
+                    la información más actualizada sobre el mundo gaming. Por eso, hemos creado un espacio único donde 
+                    los gamers de todas partes pueden satisfacer sus necesidades y mantenerse al día con las últimas tendencias.
+                    </p>
+                <p>Nuestra tienda cuenta con una amplia gama de productos, desde consolas de última generación
+                    hasta periféricos de alta calidad, pasando por una selección diversa de juegos para todas las plataformas. 
+                    También ofrecemos noticias frescas y reseñas imparciales para ayudarte a tomar decisiones informadas 
+                    sobre tus compras.</p>
             </div>
         </div>
-    </nav>
-    <main class="main-container"> 
-        <div class='grid-item uno'>
-            <img src="img/base-nota-gaming-fest_q5kk.jpeg" alt="Imagen Izquierda" class="img-fluid">
+        <div class="g2">
+            <div>  
+                <h2>Juega a tu máximo nivel</h2>
+                <p>En Freakshop, nos enorgullece ofrecer una experiencia de compra excepcional. 
+                    Navegar por nuestro sitio es fácil y seguro, y nuestro equipo de atención al cliente 
+                    está siempre disponible para responder a tus preguntas y brindarte el apoyo que necesitas.</p>
+                <p>Además, no te pierdas nuestras ofertas y promociones especiales que te permitirán obtener 
+                    los productos que amas a precios increíbles.</p>
+                <p>Así que, si eres un apasionado gamer en busca de lo mejor en hardware, juegos y noticias, ¡no busques más! Freakshop
+                    es tu tienda de confianza. Únete a la comunidad de gamers que confían en nosotros y lleva tu experiencia de juego al siguiente nivel.</p>
+                <p>¡Bienvenido a Freakshop, donde el mundo gaming cobra vida!</p>    
+            </div>
+            <div>
+                <img src="img/base-nota-gaming-fest_q5kk.jpeg" alt="Imagen Izquierda" class="img-fluid">
+            </div>
         </div>
-        <div class='grid-item dos'> 
-            <h2>Nuestra Tienda</h2>
-            <p>Freakshop es una tienda en la que podrás encontrar todo lo que necesitas para tu vida gamer,
-            enterate de los ultimos lanzamientos de videojuegos en todas las consolas, consigue tus juegos al mejor precio, actualiza tus
-            dispositivos con las mejores marcas en accesorios, mantente al tanto de las noticias del mundo gamer...</p>
-        </div>
-        <div class='grid-item tres'>
-            <img src="img/P362PMKWVNBG5HZDMTIHKDRXRM.avif" alt="Imagen Derecha" class="img-fluid">
-        </div>
-    </main>
+    </main> 
     <footer class="footer">
-        <div class="footer-content">
-            <h5>Necesitas ayuda?</h5>
-            <input type="button" value="Contactanos"/>
+        <div class="footer-list">
+            <h6>Necesitas ayuda?</h6>
+            <p>Escribenos: freashop@support.com</p>
+            <ul>
+                <li>Soporte</li>
+                <li>Lenguaje</li>
+                <li>Terminos y condiciones</li>
+            </ul>
+        </div>
+        <div class="copyright">
+            <h4 class="banner">Freakshop</h4> 
+            <p>2023 Freakshop. Todos los derechos reservados.</p>
+        </div>
+        <div class="footer-icons">
+                <a href="http://www.facebook.com"><img class="icon" src="img/facebook.png" alt="facebook" /></a>
+                <a href="http://www.instagram.com"><img class="icon" src="img/instagram.png" alt="instagram" /></a>
+                <a href="http://www.whatsapp.com"><img class="icon" src="img/whatsapp.png" alt="whatsapp" /></a>
+                <a href="http://www.twitter.com"><img class="icon" src="img/gorjeo.png" alt="twitter" /></a>
+                <a href="http://www.americanexpress.com"><img class="icon" src="img/american-express.png" alt="americanexpress" /></a>
+                <a href="http://www.mastercard.com"><img class="icon" src="img/tarjeta.png" alt="mastercard" /></a>
+                <a href="http://www.visa.com"><img class="icon" src="img/financiero.png" alt="visa" /></a>
+                <a href="http://www.paypal.com"><img class="icon" src="img/paypal (1).png" alt="paypal" /></a>
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>

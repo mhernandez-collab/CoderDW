@@ -5,79 +5,113 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Freakshop - Videos</title>
-    <link rel="stylesheet" href="../css/style.css"/>
+    <link rel="stylesheet" href="../sass/styles.css"/> 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 </head>
 <body>
-    <div class="banner">
-        <h1>Freakshop</h1>
-    </div>    
-    <nav class="navbar navbar-expand-lg navbar-custom bg-custom">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link" href="../index.html">Home</a>
-                    <a class="nav-link" href="form.html">Iniciar Sesion</a>
-                    <a class="nav-link" href="productos.html">Productos</a>
-                    <a class="nav-link" href="ofertas.html">Ofertas</a>
-                    <a class="nav-link active" href="noticias.html">Noticias</a>
-                </div>
+    <div class="navegacion">
+        <h1 class="banner">Freakshop</h1> 
+        <nav>
+            <div>
+                <a href="../index.html">Home</a>
+                <a href="form.html">Iniciar Sesion</a>
+                <a href="productos.html">Productos</a>
+                <a href="ofertas.html">Ofertas</a>
+                <a href="noticias.html">Noticias</a>
             </div>
-        </div>
-    </nav>    
-    <main class="main-container-2">
-        <div class="carousel-container">
-        <div id="my-carousel" class="carousel slide">
-            <div id="my-carousel" class="carousel slide">
+        </nav>
+    </div>   
+    <main class='offers-container'>
+        <div class='grid-offers'>
+            <div id="offers-carousel" class="carousel slide">
                 <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#my-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#my-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#my-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#offers-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#offers-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#offers-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="../img/434e9-hyperx-alloy-origins-65.webp" class="d-block w-100" alt="HypereX">
+                        <img src="../img/maxresdefault.jpeg" class="d-block w-100" alt="Logitech">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Teclado Mecanico HypereX</h5>
-                            <p>Diseño y rendimiento excepcionales</p>
-                            <button class="comprar-button">Comprar</button>
+                            <p>Durabilidad y ultracompacto</p>
+                            <button class='comprar-btn'>Comprar</button>
+                        </div>
                     </div>
-                </div>
-                    <div class="carousel-item">
+                <div class="carousel-item">
                         <img src="../img/Logitech-G203-Gaming-Mouse-Oferta-Descuento-Amazon.webp" class="d-block w-100" alt="Logitech">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Mouse Logitech</h5>
                             <p>Sensibilidad y respuesta inmediata</p>
-                            <button class="comprar-button">Comprar</button>
+                            <button class='comprar-btn'>Comprar</button>
                         </div>
                 </div>
-                    <div class="carousel-item">
+                <div class="carousel-item">
                         <img src="../img/Monitores-gamer-LG.jpeg" class="d-block w-100" alt="Monitores-gamer-LG">
-                            <div class="carousel-caption d-none d-md-block">
+                        <div class="carousel-caption d-none d-md-block">
                             <h5>Monitor Gamer LG</h5>
                             <p>Maxima tasa de refresco</p>
-                            <button class="comprar-button">Comprar</button>
-                            </div>
-                    </div>
+                            <button class='comprar-btn'>Comprar</button>
+                        </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#my-carousel" data-bs-slide="prev">
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#offers-carousel" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#my-carousel" data-bs-slide="next">
+                <button class="carousel-control-next" type="button" data-bs-target="#offers-carousel" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
+            </div>
+        </div>
+        <div class='grid-offers-2'>
+                <div class='card'>
+                    <div>
+                        <img src="../img/maxresdefault.jpeg" class="d-block w-100" alt="Logitech">
+                    </div>
+                    <h5>Teclado Mecanico HypereX</h5>
+                    <p>Durabilidad y ultracompacto</p>
+                    <button class='comprar-btn'>Comprar</button>
+                </div>
+                <div class='card'>
+                    <img src="../img/Logitech-G203-Gaming-Mouse-Oferta-Descuento-Amazon.webp" class="d-block w-100" alt="Logitech">
+                        <h5>Mouse Logitech</h5>
+                        <p>Sensibilidad y respuesta inmediata</p>
+                        <button class='comprar-btn'>Comprar</button>
+                </div>
+                <div class='card'>
+                    <img src="../img/Monitores-gamer-LG.jpeg" class="d-block w-100" alt="Monitores-gamer-LG">
+                        <h5>Monitor Gamer LG</h5>
+                        <p>Maxima tasa de refresco</p>
+                        <button class='comprar-btn'>Comprar</button>
                 </div>
             </div>
+        </div>
     </main>
     <footer class="footer">
-        <div class="footer-content">
-            <h5>Necesitas ayuda?</h5>
-            <input type="button" value="Contactanos"/>
+        <div class="footer-list">
+            <h6>Necesitas ayuda?</h6>
+            <p>Escribenos: freashop@support.com</p>
+            <ul>
+                <li>Soporte</li>
+                <li>Lenguaje</li>
+                <li>Terminos y condiciones</li>
+            </ul>
+        </div>
+        <div class="copyright">
+            <h4 class="banner">Freakshop</h4> 
+            <p>2023 Freakshop. Todos los derechos reservados.</p>
+        </div>
+        <div class="footer-icons">
+            <a href="http://www.facebook.com"><img class="icon" src="../img/facebook.png" alt="facebook" /></a>
+            <a href="http://www.instagram.com"><img class="icon" src="../img/instagram.png" alt="instagram" /></a>
+            <a href="http://www.whatsapp.com"><img class="icon" src="../img/whatsapp.png" alt="whatsapp" /></a>
+            <a href="http://www.twitter.com"><img class="icon" src="../img/gorjeo.png" alt="twitter" /></a>
+            <a href="http://www.americanexpress.com"><img class="icon" src="../img/american-express.png" alt="americanexpress" /></a>
+            <a href="http://www.mastercard.com"><img class="icon" src="../img/tarjeta.png" alt="mastercard" /></a>
+            <a href="http://www.visa.com"><img class="icon" src="../img/financiero.png" alt="visa" /></a>
+            <a href="http://www.paypal.com"><img class="icon" src="../img/paypal (1).png" alt="paypal" /></a>
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
