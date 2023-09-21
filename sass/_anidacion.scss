@@ -374,8 +374,8 @@ nav{
         max-width: 100%;
         padding-left: 90px;
         h5{
-            color: variables.$color-txt;
-            font-size: variables.$font-size-small;
+            font-family: variables.$font-banner-mv;
+            font-size: variables.$font-size-base;
         }
         div.footer-icons{
             display: grid;
