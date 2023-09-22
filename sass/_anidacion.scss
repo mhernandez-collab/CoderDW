@@ -17,6 +17,30 @@ nav{
     padding: 5px;
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
+    .grid-1 {
+        opacity: 0; 
+        position: relative;
+        animation-name: opacity; /* Nombre de la animación */
+        animation-duration: 5s; /* Duración de la animación */
+        animation-fill-mode: forwards; /* Mantener estado final después de la animación */
+    }
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0; 
+    }
+    100% {
+        opacity: 1; /* Fin de la animación: contenido completamente visible */
+    }
+}
+@keyframes rotateOnce {
+    0% {
+        transform: rotateY(290deg); /* La imagen comienza sin rotación (0 grados) */
+    }
+    100% {
+        transform: rotateY(360deg); /* La imagen gira 360 grados (una vuelta completa) */
+    }
 }
 
 .navegacion{
@@ -94,6 +118,11 @@ nav{
         border-radius: 10px; // Bordes redondeados
         padding: 20px; // Espaciado interno
         margin: 0 auto; // Centrar la tarjeta en el contenedor
+        opacity: 0; 
+        position: relative;
+        animation-name: opacity; /* Nombre de la animación */
+        animation-duration: 5s; /* Duración de la animación */
+        animation-fill-mode: forwards; /* Mantener estado final después de la animación */
         form {
             text-align: center; // Centrar el contenido del formulario
             label {
@@ -142,8 +171,18 @@ nav{
         border-radius: 10px;
         padding: 20px;
         margin: 3px;
+        text-align: center;
         font-size: smaller;
         justify-content: space-between;
+        opacity: 0; 
+        position: relative;
+        animation-name: opacity; /* Nombre de la animación */
+        animation-duration: 2s; /* Duración de la animación */
+        animation-fill-mode: forwards; /* Mantener estado final después de la animación */
+        .rotate {
+        animation: rotateOnce 3s forwards; /* 3s es la duración de la animación, puedes ajustarla */
+        transform-origin: center center; /* Establece el punto de origen de la rotación en el centro de la imagen */
+        }
         img {
             max-width: 100%; /* Ajusta el ancho de la imagen al 100% del ancho de la tarjeta */
             max-height: 300px; /* Establece la altura máxima para las imágenes */
@@ -157,6 +196,7 @@ nav{
             border: 1px solid variables.$color-txt;
             border-radius: 5px;
             background-color: variables.$color-txt;
+            font-weight:bolder ;
             color: variables.$color;
             position:sticky;
             margin-top: auto;
@@ -173,10 +213,16 @@ nav{
     justify-content: center; /* Centra horizontalmente */
     align-items: center; /* Centra verticalmente */
     padding: 20px;
+    background-color: variables.$color;
 
     .grid-offers {
         max-width: 1000px; /* Ajusta el ancho máximo según tu preferencia */
         width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+        opacity: 0; 
+        position: relative;
+        animation-name: opacity; /* Nombre de la animación */
+        animation-duration: 4s; /* Duración de la animación */
+        animation-fill-mode: forwards; /* Mantener estado final después de la animación */
     }
 
     .carousel {
@@ -229,6 +275,11 @@ nav{
         display: flex;
         flex-direction: column; /* Alinear contenido verticalmente */
         align-items: center; /* Alinear contenido horizontalmente */
+        opacity: 0; 
+        position: relative;
+        animation-name: opacity; /* Nombre de la animación */
+        animation-duration: 5s; /* Duración de la animación */
+        animation-fill-mode: forwards; /* Mantener estado final después de la animación */
         img{
             max-width: 100%; /* Ajustar la imagen al 100% del ancho de su contenedor */
             height: auto; /* Mantener la proporción de aspecto de la imagen */
@@ -386,6 +437,18 @@ nav{
                 }
             }
         }
+        div.footer-list {
+            margin: 0 10px; // Añade márgenes interiores según sea necesario
+            ul {
+                list-style: none; // Quita los puntos de la lista
+                padding: 0; // Quita el espaciado interior de la lista
+                margin-top: 10px; // Añade margen superior según sea necesario
+                li {
+                    list-style: none;
+                    text-align: center;
+                }
+            }
+        }    
     }
     .notice-container{
         display: grid;

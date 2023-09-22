@@ -19,7 +19,30 @@ nav a:hover {
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
 }
+.grid-layout .grid-1 {
+  opacity: 0;
+  position: relative;
+  animation-name: opacity; /* Nombre de la animación */
+  animation-duration: 5s; /* Duración de la animación */
+  animation-fill-mode: forwards; /* Mantener estado final después de la animación */
+}
 
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1; /* Fin de la animación: contenido completamente visible */
+  }
+}
+@keyframes rotateOnce {
+  0% {
+    transform: rotateY(290deg); /* La imagen comienza sin rotación (0 grados) */
+  }
+  100% {
+    transform: rotateY(360deg); /* La imagen gira 360 grados (una vuelta completa) */
+  }
+}
 .navegacion h1.banner {
   font-family: "Nabla", sans-serif;
   line-height: 150px;
@@ -93,6 +116,11 @@ nav a:hover {
   border-radius: 10px;
   padding: 20px;
   margin: 0 auto;
+  opacity: 0;
+  position: relative;
+  animation-name: opacity; /* Nombre de la animación */
+  animation-duration: 5s; /* Duración de la animación */
+  animation-fill-mode: forwards; /* Mantener estado final después de la animación */
 }
 .form-container .card form {
   text-align: center;
@@ -141,8 +169,18 @@ nav a:hover {
   border-radius: 10px;
   padding: 20px;
   margin: 3px;
+  text-align: center;
   font-size: smaller;
   justify-content: space-between;
+  opacity: 0;
+  position: relative;
+  animation-name: opacity; /* Nombre de la animación */
+  animation-duration: 2s; /* Duración de la animación */
+  animation-fill-mode: forwards; /* Mantener estado final después de la animación */
+}
+.product-container .card .rotate {
+  animation: rotateOnce 3s forwards; /* 3s es la duración de la animación, puedes ajustarla */
+  transform-origin: center center; /* Establece el punto de origen de la rotación en el centro de la imagen */
 }
 .product-container .card img {
   max-width: 100%; /* Ajusta el ancho de la imagen al 100% del ancho de la tarjeta */
@@ -157,6 +195,7 @@ nav a:hover {
   border: 1px solid yellow;
   border-radius: 5px;
   background-color: yellow;
+  font-weight: bolder;
   color: midnightblue;
   position: sticky;
   margin-top: auto;
@@ -172,10 +211,16 @@ nav a:hover {
   justify-content: center; /* Centra horizontalmente */
   align-items: center; /* Centra verticalmente */
   padding: 20px;
+  background-color: midnightblue;
 }
 .offers-container .grid-offers {
   max-width: 1000px; /* Ajusta el ancho máximo según tu preferencia */
   width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+  opacity: 0;
+  position: relative;
+  animation-name: opacity; /* Nombre de la animación */
+  animation-duration: 4s; /* Duración de la animación */
+  animation-fill-mode: forwards; /* Mantener estado final después de la animación */
 }
 .offers-container .carousel {
   max-width: 100%;
@@ -218,6 +263,11 @@ nav a:hover {
   display: flex;
   flex-direction: column; /* Alinear contenido verticalmente */
   align-items: center; /* Alinear contenido horizontalmente */
+  opacity: 0;
+  position: relative;
+  animation-name: opacity; /* Nombre de la animación */
+  animation-duration: 5s; /* Duración de la animación */
+  animation-fill-mode: forwards; /* Mantener estado final después de la animación */
 }
 .notice-container .side-1 img {
   max-width: 100%; /* Ajustar la imagen al 100% del ancho de su contenedor */
@@ -368,6 +418,18 @@ nav a:hover {
   .footer div.footer-icons a img.icon {
     width: 18px;
     margin: 4px;
+  }
+  .footer div.footer-list {
+    margin: 0 10px;
+  }
+  .footer div.footer-list ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+  }
+  .footer div.footer-list ul li {
+    list-style: none;
+    text-align: center;
   }
   .notice-container {
     display: grid;
