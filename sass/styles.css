@@ -485,8 +485,8 @@ nav a:hover {
     margin: 0;
   }
   .product-container .card img {
-    max-width: 50%;
-    max-height: auto;
+    max-width: 100%; /* Ajusta el ancho de la imagen al 100% del ancho de la tarjeta */
+    max-height: 100%; /* Ajusta la altura de la imagen al 100% de la tarjeta */
     object-fit: cover;
     display: block;
     margin: 0 auto;
