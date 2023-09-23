@@ -1,5 +1,62 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Nabla&family=Poppins:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Nabla&family=Poppins:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Nabla&family=Poppins:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Nabla&family=Poppins:wght@100&display=swap");
+.button, .offers-container .carousel-caption .comprar-btn, .product-container .card .comprar-btn {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid yellow;
+  border-radius: 5px;
+  background-color: yellow;
+  font-weight: bolder;
+  color: midnightblue;
+  position: sticky;
+  margin-top: auto;
+}
+
+.animacion, .notice-container .side-1, .offers-container .grid-offers-2, .offers-container .grid-offers, .product-container .card, .form-container .card, .grid-layout .grid-1 {
+  opacity: 0;
+  position: relative;
+  animation-name: opacity;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes rotateOnce {
+  0% {
+    transform: rotateY(290deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  color: yellow;
+}
+
+main {
+  background-color: midnightblue;
+}
+
+nav {
+  background-color: midnightblue;
+}
+
+footer {
+  background-color: rgb(1, 1, 71);
+}
+
 nav {
   height: 2rem;
   padding: 5px;
@@ -15,33 +72,9 @@ nav a:hover {
 
 .grid-layout {
   display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
   padding: 5px;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 20px;
-}
-.grid-layout .grid-1 {
-  opacity: 0;
-  position: relative;
-  animation-name: opacity; /* Nombre de la animación */
-  animation-duration: 5s; /* Duración de la animación */
-  animation-fill-mode: forwards; /* Mantener estado final después de la animación */
-}
-
-@keyframes opacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1; /* Fin de la animación: contenido completamente visible */
-  }
-}
-@keyframes rotateOnce {
-  0% {
-    transform: rotateY(290deg); /* La imagen comienza sin rotación (0 grados) */
-  }
-  100% {
-    transform: rotateY(360deg); /* La imagen gira 360 grados (una vuelta completa) */
-  }
 }
 .navegacion h1.banner {
   font-family: "Nabla", sans-serif;
@@ -65,13 +98,14 @@ nav a:hover {
   background-color: rgb(1, 1, 71);
 }
 .footer .copyright {
-  font-family: "Nabla", sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  margin: 0; /* Elimina cualquier margen predeterminado */
-  padding-top: auto; /* Ajusta el espaciado superior según sea necesario */
-  height: 100%; /* Asegura que el div ocupe toda la altura del contenedor */
+  align-items: center;
+  font-family: "Nabla", sans-serif;
+  margin: 0;
+  padding-top: auto;
+  height: 100%;
 }
 .footer .copyright h4 {
   font-family: "Bungee Spice", sans-serif;
@@ -116,11 +150,6 @@ nav a:hover {
   border-radius: 10px;
   padding: 20px;
   margin: 0 auto;
-  opacity: 0;
-  position: relative;
-  animation-name: opacity; /* Nombre de la animación */
-  animation-duration: 5s; /* Duración de la animación */
-  animation-fill-mode: forwards; /* Mantener estado final después de la animación */
 }
 .form-container .card form {
   text-align: center;
@@ -160,7 +189,8 @@ nav a:hover {
 
 .product-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
   padding-bottom: 5px;
 }
 .product-container .card {
@@ -172,87 +202,62 @@ nav a:hover {
   text-align: center;
   font-size: smaller;
   justify-content: space-between;
-  opacity: 0;
-  position: relative;
-  animation-name: opacity; /* Nombre de la animación */
-  animation-duration: 2s; /* Duración de la animación */
-  animation-fill-mode: forwards; /* Mantener estado final después de la animación */
 }
 .product-container .card .rotate {
-  animation: rotateOnce 3s forwards; /* 3s es la duración de la animación, puedes ajustarla */
-  transform-origin: center center; /* Establece el punto de origen de la rotación en el centro de la imagen */
+  animation: rotateOnce 3s forwards;
+  transform-origin: center center;
 }
 .product-container .card img {
-  max-width: 100%; /* Ajusta el ancho de la imagen al 100% del ancho de la tarjeta */
-  max-height: 300px; /* Establece la altura máxima para las imágenes */
+  max-width: 100%;
+  max-height: 300px;
   object-fit: cover;
-  display: block; /* Asegura que la imagen sea un elemento de bloque para centrarla verticalmente */
+  display: block;
   margin: 0 auto;
 }
-.product-container .card button {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid yellow;
-  border-radius: 5px;
-  background-color: yellow;
-  font-weight: bolder;
-  color: midnightblue;
-  position: sticky;
-  margin-top: auto;
+.product-container .card .comprar-btn {
   cursor: pointer;
 }
-.product-container .card button:hover {
+.product-container .card .comprar-btn:hover {
   background-color: midnightblue;
   color: yellow;
 }
 
 .offers-container {
   display: flex;
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center; /* Centra verticalmente */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 20px;
   background-color: midnightblue;
 }
 .offers-container .grid-offers {
-  max-width: 1000px; /* Ajusta el ancho máximo según tu preferencia */
-  width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
-  opacity: 0;
-  position: relative;
-  animation-name: opacity; /* Nombre de la animación */
-  animation-duration: 4s; /* Duración de la animación */
-  animation-fill-mode: forwards; /* Mantener estado final después de la animación */
+  max-width: 1000px;
+  width: 100%;
 }
 .offers-container .carousel {
   max-width: 100%;
   width: 100%;
 }
 .offers-container .carousel-inner {
-  text-align: center; /* Centra el contenido del carrusel horizontalmente */
+  text-align: center;
 }
 .offers-container .carousel-item img {
-  max-width: 100%; /* Ajusta el ancho máximo de las imágenes al 100% */
-  height: auto; /* Mantiene la relación de aspecto de las imágenes */
+  max-width: 100%;
+  height: auto;
 }
 .offers-container .carousel-caption h5 {
-  font-size: 1.5rem; /* Tamaño de fuente para el título */
+  font-size: 1.5rem;
 }
 .offers-container .carousel-caption p {
-  font-size: 1rem; /* Tamaño de fuente para el texto */
+  font-size: 1rem;
 }
 .offers-container .carousel-caption .comprar-btn {
-  font-weight: bold;
-  padding: 10px 20px;
-  font-size: 1rem; /* Tamaño de fuente para el botón */
-  background-color: yellow;
-  border: 1px solid yellow;
-  color: midnightblue;
   cursor: pointer;
 }
 .offers-container .carousel-caption .comprar-btn:hover {
   background-color: midnightblue;
   color: yellow;
 }
-
 .notice-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -261,21 +266,17 @@ nav a:hover {
 }
 .notice-container .side-1 {
   display: flex;
-  flex-direction: column; /* Alinear contenido verticalmente */
-  align-items: center; /* Alinear contenido horizontalmente */
-  opacity: 0;
-  position: relative;
-  animation-name: opacity; /* Nombre de la animación */
-  animation-duration: 5s; /* Duración de la animación */
-  animation-fill-mode: forwards; /* Mantener estado final después de la animación */
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 .notice-container .side-1 img {
-  max-width: 100%; /* Ajustar la imagen al 100% del ancho de su contenedor */
-  height: auto; /* Mantener la proporción de aspecto de la imagen */
+  max-width: 100%;
+  height: auto;
 }
 .notice-container .side-1 .video-container {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 Aspect Ratio (9 / 16 * 100) */
+  padding-bottom: 56.25%;
   overflow: hidden;
   width: 100%;
 }
@@ -299,9 +300,8 @@ nav a:hover {
   }
   .grid-layout {
     display: grid;
-    padding: 5px;
-    grid-template-columns: 1fr;
-    grid-gap: 0.5rem;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
   }
   .grid-layout .g2 {
     display: flex;
@@ -317,14 +317,16 @@ nav a:hover {
     font-size: 16px;
   }
   .grid-layout img {
-    max-width: 100%; /* Ajusta la imagen al ancho del contenedor */
-    height: auto; /* Mantiene la relación de aspecto de la imagen */
+    max-width: 100%;
+    height: auto;
   }
   .grid-offers {
     display: none;
   }
   .grid-offers-2 {
     display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
     grid-template-rows: auto;
   }
   .grid-offers-2 .card {
@@ -337,8 +339,8 @@ nav a:hover {
     font-size: smaller;
   }
   .grid-offers-2 .card img {
-    max-width: 100%; /* Ajusta la imagen al 100% del ancho de la tarjeta */
-    height: 100%; /* Mantiene la relación de aspecto de la imagen */
+    max-width: 100%;
+    height: 100%;
   }
   .grid-offers-2 .card button {
     width: 100%;
@@ -352,72 +354,20 @@ nav a:hover {
   }
   .form-container {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(1, 1fr);
     grid-gap: 10px;
     padding: 5px;
-  }
-  .form-container .card {
-    background-color: rgb(1, 1, 71);
-    border: 1px solid yellow;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 0 auto;
-  }
-  .form-container .card form {
-    text-align: center;
-  }
-  .form-container .card form label {
-    display: block;
-    margin-bottom: 5px;
-    font-size: 16px;
-  }
-  .form-container .card form a {
-    font-size: 16px;
-    color: yellow;
-  }
-  .form-container .card form input[type=nombre],
-  .form-container .card form input[type=text],
-  .form-container .card form input[type=email],
-  .form-container .card form input[type=password],
-  .form-container .card form input[type=submit],
-  .form-container .card form input[type=reset] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid yellow;
-    border-radius: 5px;
-    color: black;
-  }
-  .form-container .card form input[type=submit],
-  .form-container .card form input[type=reset] {
-    background-color: yellow;
-    color: midnightblue;
-    cursor: pointer;
-  }
-  .form-container .card form input[type=submit]:hover,
-  .form-container .card form input[type=reset]:hover {
-    background-color: midnightblue;
-    color: yellow;
   }
   .footer {
     display: flex;
     flex-direction: column-reverse;
+    justify-content: center;
     align-items: center;
-    text-align: center;
     max-width: 100%;
     padding-left: 90px;
   }
   .footer h4 {
     font-family: "Bungee Spice", sans-serif;
-  }
-  .footer div.footer-icons {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-template-rows: auto auto;
-  }
-  .footer div.footer-icons a img.icon {
-    width: 18px;
-    margin: 4px;
   }
   .footer div.footer-list {
     margin: 0 10px;
@@ -445,67 +395,25 @@ nav a:hover {
   .notice-container h6 {
     font-size: 18px;
   }
-  .notice-container .side-1 {
-    display: flex;
-    flex-direction: column; /* Alinear contenido verticalmente */
-    align-items: center; /* Alinear contenido horizontalmente */
-  }
-  .notice-container .side-1 img {
-    max-width: 100%; /* Ajustar la imagen al 100% del ancho de su contenedor */
-    height: auto; /* Mantener la proporción de aspecto de la imagen */
-  }
-  .notice-container .side-1 .video-container {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 Aspect Ratio (9 / 16 * 100) */
-    overflow: hidden;
-    width: 100%;
-  }
-  .notice-container .side-1 .video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
   .product-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3px;
     font-size: 16px;
+    justify-content: space-between;
+    padding: 0;
   }
-  .product-container .card {
-    background-color: rgb(32, 1, 145);
-    border: 1px solid yellow;
-    border-radius: 10px;
-    font-size: smaller;
-  }
-  .product-container .card h6 {
-    font-size: 18px;
-  }
-  .product-container .card p {
+  .product-container h5 {
     margin: 0;
+    padding: 0;
   }
-  .product-container .card img {
-    max-width: 100%; /* Ajusta el ancho de la imagen al 100% del ancho de la tarjeta */
-    max-height: 100%; /* Ajusta la altura de la imagen al 100% de la tarjeta */
-    object-fit: cover;
-    display: block;
-    margin: 0 auto;
+  .product-container h6 {
+    margin: 0;
+    padding: 0;
   }
-  .product-container .card button {
-    width: 100%;
-    padding: 5px;
-    font-weight: bolder;
-    border: 1px solid yellow;
-    border-radius: 5px;
-    background-color: yellow;
-    color: midnightblue;
-    position: sticky;
-    margin-top: auto;
-    cursor: pointer;
-  }
-  .product-container .card button:hover {
-    background-color: midnightblue;
-    color: yellow;
+  .product-container p {
+    margin: 0;
+    padding: 0;
   }
 }
 @media (min-width: 768px) {
@@ -513,23 +421,24 @@ nav a:hover {
     display: none;
   }
 }
-* {
-  margin: 0;
-  padding: 0;
-  font-family: "Poppins", sans-serif;
-  color: yellow;
+.button, .product-container .card .comprar-btn, .offers-container .carousel-caption .comprar-btn {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid yellow;
+  border-radius: 5px;
+  background-color: yellow;
+  font-weight: bolder;
+  color: midnightblue;
+  position: sticky;
+  margin-top: auto;
 }
 
-main {
-  background-color: midnightblue;
-}
-
-nav {
-  background-color: midnightblue;
-}
-
-footer {
-  background-color: rgb(1, 1, 71);
+.animacion, .grid-layout .grid-1, .form-container .card, .product-container .card, .offers-container .grid-offers, .offers-container .grid-offers-2, .notice-container .side-1 {
+  opacity: 0;
+  position: relative;
+  animation-name: opacity;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,20 +1,5 @@
-@use 'variables';
-@use 'anidacion';
+@import 'global/variables';
+@import 'global/anidacion';
+@import 'global/mixin&extend'
 
-
-* {
-    margin: 0;
-    padding: 0;
-    font-family: variables.$font-body;
-    color: variables.$color-txt;
-}
-main{
-    background-color: variables.$color;
-}
-nav{
-    background-color: variables.$color;
-}
-footer{
-    background-color: variables.$color-footer;
-}
 

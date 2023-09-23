@@ -1,0 +1,36 @@
+@use 'variables';
+//mixin grid responsive
+@mixin grid ($columns, $gap) {
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    grid-gap: $gap;
+    
+}
+//mixin flex
+@mixin flex ($dis, $dir, $jus, $aln) {
+    display: $dis;
+    flex-direction: $dir;
+    justify-content: $jus;
+    align-items: $aln;
+}
+// Extend Button
+.button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid variables.$color-txt;
+    border-radius: 5px;
+    background-color: variables.$color-txt;
+    font-weight:bolder ;
+    color: variables.$color;
+    position:sticky;
+    margin-top: auto;
+}
+// extend animacion
+.animacion {
+    opacity: 0; 
+    position: relative;
+    animation-name: opacity; 
+    animation-duration: 3s; 
+    animation-fill-mode: forwards; 
+}
+
